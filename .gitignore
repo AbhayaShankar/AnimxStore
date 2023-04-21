@@ -13,6 +13,7 @@ dist-ssr
 .env
 src/assets/Anime
 src/assets/Bin
+src/progress
 *.local
 
 # Editor directories and files
