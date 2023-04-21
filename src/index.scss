@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&family=Cutive&family=Genos:wght@400;600&family=Gloock&family=Inter&family=Montserrat:wght@400;700;900&family=Rampart+One&family=Sacramento&family=Space+Mono:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // font-family: "Cabin", sans-serif;
+    font-family: 'Montserrat', sans-serif;
+
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    // line-height: 26px;
+    font-weight: 500;
+    // font-family: 'Sacramento', cursive;
+}
+
+
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+	border-radius: 0px;
+	background-color: #191919;
+}
+
+body::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #404040;
+}
+
+body::-webkit-scrollbar-thumb:hover
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #444444;
+}

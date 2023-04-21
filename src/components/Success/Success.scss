@@ -1,0 +1,88 @@
+@import "../../css-config/mixins.scss";
+
+.success__page{
+    height: 85vh;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+    // background-color: rgba(218, 218, 218, 0.254);
+    
+    @include md{
+        height: 90vh;
+        gap: 80px;
+        flex-direction: row;
+        margin-bottom: 0;
+    }
+
+    .success__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        -webkit-box-shadow: 1px 2px 22px 5px #d5f7e6;
+        -moz-box-shadow: 1px 2px 22px 5px #d5f7e6;
+        box-shadow: 1px 2px 22px 5px rgba(90, 235, 146, 0.805);
+        border-radius: 15px;
+        gap: 20px;
+        width: 85vw;
+        background-color: #d5f7e683;
+        
+        @include md{
+            width: 35vw;
+            gap: 32px;
+            height: 250px;
+        }
+
+        .success__svg{
+            background:  linear-gradient(to bottom right , #21dfa6 , #5ae4a8);
+            border-radius: 35px;
+            padding: 4px 6px 2px;
+
+            @include md{
+                padding: 8px 9px 6px;
+            }
+            svg{
+                stroke-width: 2;
+                font-size: 20px; 
+                
+                @include md{
+                    stroke-width: 3;
+                    
+                }
+            }
+        }
+
+        .success__msg{
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: 1.2px;
+            background: linear-gradient(to bottom right , #21dfa6 , #5ae4a8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            
+            @include md{
+                font-size: 36px;
+                font-weight: 900;
+            }
+        }
+
+        
+    }
+    
+    .success__right{
+        
+        img{
+            height: 330px;
+
+            @include md{
+                height: 600px;
+                
+            }
+        }
+    }
+}

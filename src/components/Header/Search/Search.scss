@@ -1,0 +1,194 @@
+@import "../../../css-config/mixins.scss";
+
+.search__modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: white;
+    transform: translateY(100%);
+    animation: animateSearch 0.5s cubic-bezier(0.1, 0.3, 0.6, 0.1) forwards;
+
+    .form__field{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 30px;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+        position: relative;
+
+        @include md{
+            padding: 20px 0;
+        }
+        input{
+            width: 100%;
+            max-width: 1200px;
+            outline: none;
+            border: none;
+            font-size: 18px;
+            font-weight: 600;
+            height: 50px;
+            text-align: center;
+            color: #191919;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+      
+            @include md{
+                font-size: 32px;
+                height: 80px;
+            }
+
+            &::placeholder{
+                color: rgba(0,0,0,0.25);
+            }
+        }
+
+        .close__btn{
+            font-size: 22px;
+            cursor: pointer;
+            transform-origin: center center;
+            transition: transform 0.4s ease;
+            
+            @include md{
+                right: 80px;
+                font-size: 28px;
+
+            }
+
+            &:hover{
+                color: rgba(0,0,0,0.5);
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    .search__results__container{
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+
+        @include md{
+            max-width: 800px;
+        }
+        .search__results{
+            height: calc(100vh - 110px);
+            overflow: auto;
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
+            @include md{
+                height: calc(100vh - 160px);
+
+            }
+            .search__result{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                padding: 10px 10px;
+                border-bottom: 1px solid rgba(0,0,0,0.2);
+                cursor: pointer;
+
+                .img__container{
+                    background-color: rgba(0,0,0,0.05);
+                    width: 60px;
+                    height: 60px;
+                    flex-shrink: 0;
+                    padding: 5px;
+                    border-radius: 8px;
+                    
+                    img{
+                        width: 100%;
+                        height: 100%;
+
+                    }
+                }
+
+                .prod__details{
+                    overflow: hidden;
+                    position: relative;
+                    .name{
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        font-size: 16px;
+                        line-height: 1;
+                        margin-bottom: 10px;
+                        font-weight: 600;
+                        display: block;
+                        
+                        @include md{
+                            font-size: 18px;
+                        }
+        
+                    }
+        
+                    .desc{
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        letter-spacing: 0.4px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        // margin-top: 5px;
+                        color: rgba(0,0,0,0.5);
+        
+                    }
+                }
+
+                &:hover{
+                    background-color: rgba(0,0,0,0.025);
+                    border-bottom: 2px solid rgba(0,0,0,0.2);
+                }
+         
+            }
+        }
+    }
+}
+
+@keyframes animateSearch {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+// .search__modal::-webkit-scrollbar{
+//     display: none;
+// }
+
+
+.search__result::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+	border-radius: 0px;
+	background-color: #191919;
+}
+
+.search__result::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+.search__result::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #404040;
+}
+
+.search__result::-webkit-scrollbar-thumb:hover
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #444444;
+}

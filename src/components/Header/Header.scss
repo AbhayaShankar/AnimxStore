@@ -1,0 +1,199 @@
+@import "../../css-config/mixins.scss";
+
+.header{
+    background-color: #191919;
+    color: white;
+    padding: 12px 25px;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    @include md{
+        padding: 12px 20px;
+        height: 70px;
+        gap: 350px;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+
+    }
+
+    .header__left{
+        margin-left: -55px;
+        
+        @include md{
+            margin-left: 0px;
+
+        }
+
+        ul {
+            color: white;
+            display: none;
+            gap: 50px;
+            @include md{
+                display: flex;
+            }
+            
+            li{
+                list-style-type: none;
+                letter-spacing: 0.5px;
+                cursor: pointer;
+                flex: 1;
+            } 
+        }
+        
+        .dropdown {
+            // display: none;
+            opacity: 0;
+            // visibility: hidden;
+            transform: translateY(-20px);
+            transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+
+            &::before{
+                content: "";
+                top: 100%;
+                left: 300px;
+                width: 0;
+                height: 0;
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid #ffffff;
+                position: absolute;
+                left: 35px;
+                top: -8px;
+                margin-left: 0px;
+            }
+            
+            @include md{
+                position: absolute;
+                top: 90%;
+                left: 400px;
+                width: 370px;
+                height: fit-content;
+                padding:10px 10px;
+                background-color: white;
+                border: 1px solid gray;
+                border-radius: 21px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.3s ease-in-out, transform 0.4s ease,  visibility 0.4s;
+                z-index: 9999;
+            }
+
+            ul {
+                color: rgb(28, 28, 28);
+                display: none;
+                gap: 50px;
+                @include md{
+                    display: grid;
+                    grid-template-columns: 130px 140px;
+                    padding: 30px 20px;
+                }
+                
+                li{
+                    list-style-type: none;
+                    letter-spacing: 0.5px;
+                    cursor: pointer;
+                    font-weight: 600;
+                    color: rgba(0, 0, 0, 0.6);
+                    // flex: 1;
+
+                    &:hover{
+                        color: rgb(0, 0, 0);
+                    }
+                } 
+            }
+          }
+          
+          .dropdown.show {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: translateY(0);
+          }
+    }
+
+    .header__middle{
+        text-transform: uppercase;
+        font-size: 24px;
+        color: white;
+        align-items: center;
+        font-family: 'Cormorant SC', serif;
+        letter-spacing: 1.5px;
+        margin-left: 10px;
+        cursor: pointer;
+        
+        @include md{
+            margin-left: 50px;
+            font-size: 30px;
+            position: absolute;
+            left: 50%;
+            letter-spacing: 3.5px;
+            font-weight: 500;
+            transform: translateX(-50%);
+        }
+    }
+
+    .header__right{
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        
+        @include md{
+            gap: 35px;
+        }
+
+        svg{
+            font-size: 18px;
+            cursor: pointer;
+
+            @include md{
+                font-size: 20px;
+            }
+        }
+
+    .cart__icon{
+        position: relative;
+        .cart__count{
+            text-align: center;
+            border: none;
+            width: 20px;
+            padding: 2px;
+            font-size: 12px;
+            border-radius: 20px;
+            background-color: rgb(231, 48, 48);
+            color: white;
+            position: absolute;
+            top: -10px;
+            right: -10px
+        }
+    }
+    }
+}
+
+.header__sticky{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: all 0.25s ease-in;
+    transform: translateY(-70px);
+    animation: stickyHeader 0.3s ease-in-out forwards;
+}
+
+@keyframes stickyHeader {
+
+    0%{
+        transform: translateY(-70px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+    
+}

@@ -1,0 +1,191 @@
+@import "../../css-config/mixins.scss";
+
+.cart__panel{
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+
+    @include md{
+
+    }
+
+    .cart__opac__layer{
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @include md{
+
+        }
+
+    }
+
+    .cart__content{
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        position: relative;
+        z-index: 1;
+        transform: translateX(100%);
+        animation: toggleCart 0.42s ease forwards;
+        display: flex;
+        flex-direction: column;
+        padding: 15px 12px;
+
+        @include md{
+            width: 340px;
+        }
+
+        .cart__header{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+
+            .cart__heading{
+                flex-grow: 1;
+                margin-bottom: 0;
+                font-size: 20px;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+
+            }
+
+            .close__btn{
+                display: flex;
+                align-items: center;
+                gap: 6px;
+
+                svg{
+                    font-size: 18px;
+                    cursor: pointer;
+                    transition: transform 0.4s ease;
+
+                    &:hover{
+                        transform: rotate(90deg);
+                    }
+                }
+
+                .text{
+                    font-size: 14px;
+                    cursor: pointer;
+                }
+                &:hover{
+                    opacity: 0.5;
+                  
+                }
+            }
+        }
+
+        .cart__empty{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+            gap: 25px;
+            svg{
+                font-size: 100px;
+                color: rgba(0,0,0,0.1);
+
+                @include md{
+                    font-size: 120px;
+                }
+            }
+
+            span{
+               font-size: 16px;
+               font-weight: 700;
+            }
+
+            .return__to__home{
+                display: flex;
+                outline: none;
+                align-items: center;
+                font-size: 14px;
+                gap: 8px;
+                color: white;
+                padding: 7px 12px;
+                border: 0;
+                letter-spacing: 0.8px;
+                background-color: #9401ca;
+                border-bottom: 3px solid #71009a;
+                border-right: 3px solid #71009a;
+                cursor: pointer;
+               
+            }
+        }
+
+        .cart__footer{
+            border-top: 2px solid rgba(0,0,0,0.15);
+
+            .subtotal{
+                padding: 12px 15px;
+                display: flex;
+                justify-content: space-between;
+                .text{
+                    margin-bottom: 0;
+                    text-transform: uppercase;
+                    font-size: 18px;
+                    font-weight: 700;
+
+                    &.total{
+                        color: #9401ca;
+                        font-weight: 900;
+                        letter-spacing: 0.8px;
+
+                    }
+                }
+            }
+
+            .button{
+                padding: 10px 20px 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .checkout__btn{
+                    display: flex;
+                    outline: none;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: 800;
+                    font-size: 18px;
+                    gap: 8px;
+                    width: 90%;
+                    height: 50px;
+                    text-align: center;
+                    color: white;
+                    padding: 7px 12px;
+                    border: 0;
+                    letter-spacing: 1.8px;
+                    background-color: #9401ca;
+                    border-top: 1px solid #71009a ;
+                    border-bottom: 4px solid #71009a;
+                    border-right: 4px solid #71009a;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    @keyframes toggleCart {
+
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(0);
+        }
+        
+    }
+}

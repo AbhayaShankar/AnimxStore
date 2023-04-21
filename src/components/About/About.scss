@@ -1,0 +1,121 @@
+@import "../../css-config/mixins.scss";
+
+.about__main{
+    width: 100%;
+    position: relative;
+    
+    .about__img{
+        background-color: rgba(0,0,0,0.9);
+        
+        img{
+            width: 100%;
+            height: 800px;
+            opacity: 0.1;
+            object-fit: cover;
+
+        }
+    }
+    .about__content{
+        position: absolute;
+        top: 0;
+        color: white;
+        padding: 15px 25px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        @include md{
+            padding: 40px 50px 20px;
+        }
+
+        h1{
+            font-family: 'Cormorant SC', serif;
+            font-size: 44px;
+            text-align: center;
+            letter-spacing: 2.5px;
+            margin: 0 auto 30px;
+
+            @include md{
+                width: 1400px;
+                font-size: 64px;
+                font-weight: 600;
+                margin: 0 auto ;
+            }
+        }
+
+        .text__upper{
+            // margin-top: 15px;
+            line-height: 22px;
+            font-size: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+                
+            
+            .text__lower{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                gap: 10px;
+                
+                .text__lower__img{
+                    width: 200px;
+
+                    @include md{
+                        width: 300px;
+                    }
+                }
+
+                p{
+                    max-width: 300px;
+
+                    @include md{
+                        max-width: fit-content;
+                    }
+
+                    a{
+                        text-decoration: none;
+                    }
+
+                    span{
+                        letter-spacing: 0.8px;
+                        color: rgba(255,255,255,0.45);
+
+                        &:hover{
+                            transition: all 200ms ease-in;
+                            // color: rgb(194, 193, 193);
+                            color: rgba(235, 233, 122, 0.7);
+                        }
+                    }
+                }
+
+                @include md{
+                    flex-direction: row;
+                    gap: 25px;
+                }
+            }
+
+            @include md{
+                margin-top: 50px;
+                line-height: 26px;
+                font-size: 18px;
+                // flex-direction: row;
+                max-width: 900px;
+
+            }
+
+            .p__lower{
+
+                span{
+                    color: rgba(235, 233, 122, 0.7);
+                    letter-spacing: 2px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+}

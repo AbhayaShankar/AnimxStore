@@ -1,0 +1,124 @@
+@import "../../../css-config/mixins.scss";
+
+.main__category{
+    margin: 25px 0;
+    max-width: 1200px !important;
+    
+    @include md{
+        margin: 50px 0;
+        
+    }
+
+    .categories{
+        display: flex;
+        align-items: center;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        gap: 10px;
+        cursor: pointer;
+        
+ 
+        @include md{
+            gap: 20px;
+            
+        }
+
+        span{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            h3{
+                margin-right: 20px;
+            }
+        }
+
+        .category{
+
+            .cat__img:hover{
+                animation: catAnimate 0.3s ease-in-out forwards ;
+            }
+
+            @keyframes catAnimate {
+                0%{
+                    transform: scale(1);
+                }
+            
+                100%{
+                    transform: scale(1.05);
+                }
+            }
+                
+        }
+    }
+
+}
+
+.categories::-webkit-scrollbar{
+    display: none;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    @include md{
+        margin-left: 20px;
+        margin-right: 50px;
+        
+    }
+
+    @include lg{
+        margin-left: 69px;
+        margin-right: 0px;
+    }
+}
+
+.swiper-slide:first-child{
+    @include lg{
+        margin-left: 30px;
+    }
+}
+
+.swiper-slide:last-child{
+    @include lg{
+        margin-right: 30px;
+    }
+    
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 200px;
+    object-fit: contain;
+        @include md{
+            width: 300px;
+            height: 150px;
+
+        }
+  }
+  
+  .cat__img:hover{
+    animation: catAnimate 0.3s ease-in-out forwards ;
+}
+
+@keyframes catAnimate {
+    0%{
+        transform: scale(1);
+    }
+
+    100%{
+        transform: scale(1.05);
+    }
+   
+}

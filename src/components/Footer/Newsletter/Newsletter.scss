@@ -1,0 +1,100 @@
+@import "../../../css-config/mixins.scss";
+
+.nl__main{
+    background-image: url("../../../assets/newsletter-bg.jpeg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    object-fit: contain;
+    gap: 10px;
+    
+    @include md{
+        height: 60vh;
+        object-fit: cover;
+
+    }
+
+    .nl__name{
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 900;
+        color: #8a8a8a;
+        // -webkit-text-stroke: 1px gray;
+        // -webkit-text-stroke-color: black;
+
+        @include md{
+            font-size: 24px;
+            // border: 1px solid gray;
+            text-shadow: 2px 2px 2px rgba(61, 61, 61, 0.25);
+            letter-spacing: 1.2px;
+        }
+    }
+
+    .nl__heading{
+        text-transform: uppercase   ;
+        font-weight: 900;
+        text-align: center;
+        line-height: 26px;
+        font-size: 20px;
+        
+        @include md{
+            font-size: 26px;
+
+        }
+    }
+
+    .nl__email{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 5px;
+        
+        
+        .nl__input{
+            outline: none;
+            padding: 8px 18px;
+        }
+
+        .nl__btn{
+            padding: 8px 18px;
+            color: white;
+            border: 2px solid #9401ca;
+            background-color: #9401ca;
+            cursor: pointer;
+
+        }
+    }
+
+
+
+
+    .nl__privacy{
+        margin-top: -6px;
+        color: rgb(90, 90, 90);
+        font-size: 10px;
+    }
+
+    .nl__socials{
+        max-width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+
+        img{
+            width: 30px;
+            cursor: pointer;
+        }
+    }
+
+
+
+
+
+
+
+
+
+}

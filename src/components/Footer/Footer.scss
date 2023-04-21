@@ -1,0 +1,366 @@
+@import "../../css-config/mixins.scss";
+
+.footer{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    @include md{
+        gap: 80px;
+    }
+
+
+
+    .footer__top{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: flex-start;
+        flex-flow: wrap;
+        gap: 30px;
+        padding: 0 25px;
+        
+        @include md{
+            flex-flow: wrap;
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: flex-start;
+            gap: 80px;
+            
+        }
+
+        .f__about{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 12px;
+            max-width: 330px;
+            
+            @include md{
+                gap: 20px;
+
+            }
+
+            h2{
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                svg{
+                    width: 22px;
+                    cursor: pointer;
+                    stroke:  rgba(100, 100, 100, 0.8);
+                    transition: stroke 0.5s ease;
+                    &:hover{
+                        stroke: rgb(0, 0, 0);
+                    }
+                }
+            }
+
+            p{
+                font-size: 12px;
+                color: rgb(100, 100, 100);
+                line-height: 20px;
+            }
+        }
+
+        .f__contact{
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 12px;
+            max-width: 300px;
+            
+            @include md{
+                gap: 25px;
+                
+            }
+
+            h2{
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            p{
+                font-size: 12px;
+            }
+
+            .fc__location{
+                display: flex;
+                gap: 10px;
+                align-items: flex-start;
+
+                svg{
+                    flex-shrink: 0;
+                    color: rgb(100, 100, 100);
+                    cursor: pointer;
+                    transition: color 0.5s ease;
+
+                    &:hover{
+                        color: rgb(0, 0, 0);
+                    }
+                }
+
+                p{
+                    font-size: 12px;
+                    margin-top: -5px;
+                    color: rgb(100, 100, 100);
+
+                }
+
+            }
+
+            .fc__phone{
+                display: flex;
+                gap: 10px;
+
+                svg{
+                    color: rgb(100, 100, 100);
+                    cursor: pointer;
+                    transition: color 0.5s ease;
+
+                    &:hover{
+                        color: rgb(0, 0, 0);
+                    }
+
+                }
+
+                p{
+                    font-size: 12px;
+                    margin-top: -3px;
+                    color: rgb(100, 100, 100);
+
+                }
+
+            }
+
+            .fc__email{
+                display: flex;
+                gap: 10px;
+
+                svg{
+                    color: rgb(100, 100, 100);
+                    cursor: pointer;
+                    transition: color 0.5s ease;
+
+                    &:hover{
+                        color: rgb(0, 0, 0);
+                    }
+
+                }
+
+                p{
+                    font-size: 12px;
+                    margin-top: -3px;
+                    color: rgb(100, 100, 100);
+
+                }
+
+            }
+        }
+
+        .f__category{
+
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 18px;
+            max-width: 300px;
+            
+            @include md{
+                margin-right: 30px;
+
+            }
+            
+            h2{
+                font-size: 20px;
+            }
+            
+            .f__categories{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+                gap: 8px;
+                
+                @include md{
+                    gap: 15px;
+                    
+                }
+
+                li{
+                    list-style-type: none;
+                    font-size: 12px;
+                    color: rgba(100, 100, 100, 0.806);
+                    cursor: pointer;
+
+                    &:hover{
+                        color: black;
+                        font-weight: 500;
+                    }
+                }
+
+            }
+        }
+
+        .f__page{
+
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+            gap: 18px;
+            max-width: 200px;
+
+            h2{
+                font-size: 20px;
+
+            }
+
+            .pages{
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+                gap: 8px;
+                
+                @include md{
+                    gap: 15px;
+                    
+                }
+
+                li{
+                    list-style-type: none;
+                    font-size: 12px;
+                    color: rgba(100, 100, 100, 0.8);
+                    cursor: pointer;
+
+                    &:hover{
+                        color: black;
+                    }
+
+                }
+            }
+
+        }
+
+    }
+
+    .footer__bottom{
+        border-top: 1px solid rgb(0, 0, 0, 0.2);
+        height: 70px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding-top: 5px;
+        
+        @include md{
+            border-top: 1px solid rgb(0, 0, 0,0.15);
+            height: 60px;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 300px;
+        }
+
+        h3{
+            color: rgb(0, 0, 0, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            word-spacing: 2px;
+            font-size: 10px;
+            position: relative;
+            max-width: 350px;
+            
+            @include md{
+                max-width: 600px;
+                font-size: 12px;
+            }
+            
+
+            span{
+                margin-bottom: -50px;
+                position: absolute;
+                top: -4px;
+                padding-left: 2px;
+
+                @include md{
+
+                }
+            }
+        }
+
+        .payments__img{
+            margin-bottom: 15px;
+            width: 57%;
+            
+            @include md{
+                width: 25%;
+                margin-bottom: 0px;
+            }
+        }
+
+        
+    }
+
+}
+
+.scrollToTop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 100;
+    cursor: pointer;
+    
+    @include md{
+        bottom: 60px;
+        right: 50px;
+    }
+    button{
+        border: none;
+        background-color: transparent;
+        border-radius: 50px;
+        cursor: pointer;
+        // box-shadow: 0 2px 5px rgba(100, 100, 100, 0.8);
+        
+        
+        img{
+            width: 40px;
+            background-color: rgba(230, 230, 230, 0.5);
+            border-radius: 50%;
+            transition: background-color 0.2s ease-in;
+
+            &:hover{
+                background-color: rgba(230, 230, 230, 0.62);
+
+            }
+        }
+       
+    }
+
+    p{
+        font-size: 14px;
+        font-weight: 600;
+        
+        @include md{
+            font-size: 16px;
+            
+        }
+    }
+}

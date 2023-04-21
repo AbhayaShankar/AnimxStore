@@ -1,0 +1,59 @@
+@import "../../css-config/mixins.scss";
+
+.category__main{
+    margin: 30px 0;
+
+    @include md{
+        margin: 75px 0;
+    }
+
+    .loading{
+        margin-left : 10px;
+        display: flex;
+        align-items: center;
+
+        h3{
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            gap: 8px;
+            margin-right: 20px;
+
+            @include md{
+                font-size: 24px;
+            } 
+        }
+    }
+
+    .layout{
+        max-width: calc(100% - 20px);
+        margin: 0 auto;
+
+        @include md{
+            max-width: 1200px;
+        }
+
+
+        .category__title{
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+
+            @include md{
+                font-size: 24px;
+            }
+        }
+
+        .products__container{
+            margin: 20px 0;
+
+            @include md{
+                margin: 40px 0;
+            }
+
+        }
+
+    }
+
+
+}

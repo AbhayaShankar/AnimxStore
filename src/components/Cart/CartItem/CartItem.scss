@@ -1,0 +1,104 @@
+
+.cart__products{
+    flex-grow: 1;
+    overflow-y: scroll;
+    .cart__product{
+        padding: 20px 15px 10px;
+        display: flex;
+        gap: 20px;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+
+        .img__container{
+            background-color: rgba(0,0,0,0.05);
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            flex-shrink: 0;
+
+            img{
+                width: 90%;
+                height: 90%;
+            }
+
+        }
+
+        .prod__details{
+            overflow: hidden;
+            position: relative;
+            .name{
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                font-size: 16px;
+                line-height: 1;
+                margin-bottom: 10px;
+                font-weight: 600;
+                display: block;
+                padding-right: 25px;
+
+            }
+
+            .close{
+                position: absolute;
+                right: 0px;
+                top: 0;
+                cursor: pointer;
+            }
+
+            .quantity__buttons{
+                width: fit-content;
+                display: flex;
+                border: 1px solid rgba(0,0,0,0.1);
+                margin-right: 10px;
+                height: 30px;
+                margin-bottom: 8px;
+                span{
+                    font-size: 18px;
+                    width: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    color: #6b6b6b;
+                    &:nth-child(1){
+                        font-size: 20px;
+                        border-right: 1px solid rgba(0,0,0,0.2);
+                    }
+                    &:nth-child(2){
+                        font-size: 14px;
+                        width: 40px;
+                    }
+                    &:nth-child(3){
+                        font-size: 20px;
+                        border-left: 1px solid rgba(0,0,0,0.2);
+                    }
+                }
+            }
+
+            .text{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                letter-spacing: 0.4px;
+                font-size: 14px;
+                font-weight: 600;
+                margin-top: 5px;
+
+                .highlight{
+                    color: #9401ca;
+                    font-weight: 800;
+                    letter-spacing: 0.8px;
+                }
+                span{
+
+                }
+            }
+        }
+        &:hover{
+            background-color: rgba(0,0,0,0.05);
+            border-bottom: 2px solid rgba(0,0,0,0.2);
+        }
+    }
+}

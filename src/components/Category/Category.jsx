@@ -1,0 +1,60 @@
+import { useParams } from "react-router-dom";
+import "./Category.scss";
+import Products from "../Products/Products";
+import useFetch from "../../hooks/useFetch";
+import { useEffect, useState } from "react";
+import BeatLoader from "react-spinners/BeatLoader";
+
+const Category = () => {
+  const { id } = useParams();
+  const [loading, setLoading] = useState(true);
+  const { data } = useFetch(
+    `/api/products?populate=*&[filters][categories][id]=${id}`
+  );
+
+  // Reason why Loading state is not coming is because of {data} which we are fetching is after resolving the api call.
+
+  // What I think we can do is setTimeout Function for 2-3 sec and display the message over there.
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
+  return (
+    <div className="category__main">
+      {loading ? (
+        <div className="loading">
+          <h3>
+            Loading{" "}
+            {
+              data?.data?.[0]?.attributes?.categories?.data[0]?.attributes
+                ?.title
+            }
+          </h3>
+          <BeatLoader
+            color="#9401ca"
+            cssOverride={{}}
+            loading
+            margin={5}
+            size={18}
+            speedMultiplier={1}
+          />
+        </div>
+      ) : (
+        <div className="layout">
+          <div className="category__title">
+            {
+              data?.data?.[0]?.attributes?.categories?.data[0]?.attributes
+                ?.title
+            }
+          </div>
+          <Products innerProp={true} products={data} />
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Category;

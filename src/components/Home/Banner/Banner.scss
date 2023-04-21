@@ -1,0 +1,198 @@
+@import "../../../css-config/mixins.scss";
+
+.banner__div{
+    background: linear-gradient(to bottom right, #9401ca,  rgb(57, 3, 206));
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 15px;
+    height: calc(100vh - 50px);
+    // if after backend deployemnt anything happns then correct this
+    
+    @include md{
+        // min-width: 960px;
+        width: 100%;
+        height: calc(100vh - 70px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+
+    }
+
+    @include xl{
+        gap: 100px;
+    }
+
+    .banner__left{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+        
+        @include md{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 100px;
+            gap: 35px;
+            line-height: 36px;
+            min-width: 360px;
+
+        }
+
+        .banner__top{
+            display: flex;
+            align-items: center;
+
+            @include md{
+                position: relative;
+            }
+
+
+            h1{
+                text-transform: uppercase;
+                font-size: 28px;
+                font-weight: 900;
+                color: white;
+                letter-spacing: 3.2px;
+                font-family: 'Gloock', serif;
+                margin-top: 10px;
+                text-align: center;
+                z-index: 2;
+                
+                
+                
+                @include md{
+                    // font-weight: 600;
+                    letter-spacing: 8px;
+                    font-size: 70px;
+                    // margin-bottom: 10px;
+                    margin-top: 0px;
+                    line-height: 70px;
+                }
+                
+            }
+
+            h1:first-child{
+                margin-right: 20px;
+
+                @include md{
+                    margin-right: 40px;
+                }
+            }
+            
+            img{
+                margin-top: 10px;
+                width: 45px;
+                opacity: 0.3;
+                width: 80px;
+                position: absolute;
+                left: 157px;
+                
+                @include md{
+                    width: 220px;
+                    z-index: 0;
+                    opacity: 0.3;
+                    margin-top: 0px;
+                    left: 180px;
+
+                }
+                
+            }
+        }
+
+
+        p{
+            max-width: 320px;
+            text-align: justify;
+            color: white;
+            font-size: 12px;
+            line-height: 20px;
+            color: rgba(255,255,255,0.6);
+            
+            @include md{
+                line-height: 22px;
+                font-size: 13px;
+                color: rgba(255,255,255,0.6);
+                max-width: 500px;
+                // margin-bottom: 10px;
+
+            }
+        }
+
+        .banner__btns{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            .banner__btn{
+                padding: 12px 20px;
+                text-transform: uppercase;
+                border: 2px solid white;
+                background-color: transparent;
+                color: white;
+                font-weight: 600;
+                cursor: pointer;
+                letter-spacing: 2px;
+    
+            }
+    
+            .banner__btn2{
+                padding: 12px 20px;
+                text-transform: uppercase;
+                border: 2px solid white;
+                background-color: white;
+                color: #212121;
+                font-weight: 600;
+                cursor: pointer;
+                letter-spacing: 2px;
+    
+            }
+        }
+
+
+        .banner__btn2:hover{
+            padding: 12px 20px;
+            text-transform: uppercase;
+            border: 2px solid white;
+            background-color: transparent;
+            color: white;
+            transition: all 0.35s ease-in-out;
+        }
+    }
+
+
+    .banner__img{
+        width: 240px;
+        margin-right: 10px;
+        // padding-top: 140px;
+    
+        @include md{
+            margin-top: 90px;
+            width: 400px;
+        }
+
+        @include xl{
+            margin-top: 100px;
+            width: 420px;
+
+        }
+
+        @include xxl{
+            margin-top: 110px;
+            width: 450px;
+
+        }
+    }
+
+    
+
+}
+    
