@@ -37,7 +37,7 @@ const Newsletter = () => {
   return (
     <div className="nl__main">
       <p className="nl__name">newsletter</p>
-      <h3 className="nl__heading">Sign up for latest updates and offers</h3>
+      <p className="nl__heading">Sign up for latest updates and offers</p>
       <form className="nl__email" ref={newsletterRef} onSubmit={sendEmail}>
         <input
           className="nl__input"
