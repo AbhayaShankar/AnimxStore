@@ -67,13 +67,11 @@ const Footer = () => {
             <h2>Contact</h2>
             <div className="fc__location">
               <ImLocation />
-              <p>
-                MW IV 02 Officer's colony, Moonidh, Dhanbad, Jharkhand. 828129
-              </p>
+              <p>Animx Online Store © - New Delhi 110001</p>
             </div>
             <div className="fc__phone">
               <MdPhoneIphone />
-              <p>Phone: 6205734953</p>
+              <p>Phone: 620***49**</p>
             </div>
             <div className="fc__email">
               <MdEmail />
