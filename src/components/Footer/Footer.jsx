@@ -117,7 +117,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="scrollToTop">
-        <button onClick={handleScrollToTop}>
+        <button className="scrToTopBtn" onClick={handleScrollToTop}>
           <img src={upArrow} alt="" />
         </button>
         <p>Top</p>

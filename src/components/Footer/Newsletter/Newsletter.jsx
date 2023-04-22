@@ -65,16 +65,32 @@ const Newsletter = () => {
         Will be used in accordance with our Privacy Policy
       </p>
       <div className="nl__socials">
-        <a href="https://www.linkedin.com/in/abhayashankar/" target="blank">
+        <a
+          href="https://www.linkedin.com/in/abhayashankar/"
+          aria-label="linkedin"
+          target="blank"
+        >
           <img src={linkedin} alt="" />
         </a>
-        <a href="https://www.instagram.com/abhaya_shankar05/" target="blank">
+        <a
+          href="https://www.instagram.com/abhaya_shankar05/"
+          aria-label="instagram"
+          target="blank"
+        >
           <img src={insta} alt="" />
         </a>
-        <a href="https://twitter.com/AbhayaShankar2" target="blank">
+        <a
+          href="https://twitter.com/AbhayaShankar2"
+          aria-label="twitter"
+          target="blank"
+        >
           <img src={twitter} alt="" />
         </a>
-        <a href="https://github.com/AbhayaShankar" target="blank">
+        <a
+          href="https://github.com/AbhayaShankar"
+          aria-label="github"
+          target="blank"
+        >
           <img src={github} alt="" />
         </a>
         {/* 
