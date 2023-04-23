@@ -50,4 +50,6 @@ Site Logo - Rahul ko diya hai... ✅
 
 20. Design a button scroll to top feature implement kr de usme. ✅
 
-21. Width Issue in Iphone 13
+21. Width Issue in Iphone 13 . ❌
+
+22. Add a custom mouse cursor. ❌
