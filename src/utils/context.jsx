@@ -7,6 +7,7 @@ const AppContext = ({ children }) => {
   const [categories, setCategories] = useState("");
   const [footerCategories, setFooterCategories] = useState("");
   const [products, setProducts] = useState("");
+  const [scroller, setScroller] = useState(true);
 
   // cart states
   const [cartItems, setCartItems] = useState([]);
@@ -75,6 +76,8 @@ const AppContext = ({ children }) => {
         setFooterCategories,
         products,
         setProducts,
+        scroller,
+        setScroller,
         cartItems,
         setCartItems,
         cartCount,

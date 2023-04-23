@@ -11,7 +11,8 @@ import upArrow from "../../assets/up.png";
 
 const Footer = () => {
   const navigate = useNavigate();
-  const { footerCategories, setFooterCategories } = useContext(Context);
+  const { footerCategories, setFooterCategories, scroller } =
+    useContext(Context);
 
   const getCategories = () => {
     fetchDataFromApi(
@@ -116,12 +117,14 @@ const Footer = () => {
           <img className="payments__img" src={payments} alt="" />
         </div>
       </div>
-      <div className="scrollToTop">
-        <button className="scrToTopBtn" onClick={handleScrollToTop}>
-          <img src={upArrow} alt="" />
-        </button>
-        <p>Top</p>
-      </div>
+      {scroller && (
+        <div className="scrollToTop">
+          <button className="scrToTopBtn" onClick={handleScrollToTop}>
+            <img src={upArrow} alt="" />
+          </button>
+          <p>Top</p>
+        </div>
+      )}
     </div>
   );
 };

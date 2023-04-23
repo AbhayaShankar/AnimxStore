@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { MdClose } from "react-icons/md";
 import { BsCartX } from "react-icons/bs";
@@ -9,7 +9,8 @@ import { loadStripe } from "@stripe/stripe-js";
 import { makePaymentRequest } from "../../utils/api";
 
 const Cart = ({ setCart }) => {
-  const { cartItems, cartSubtotal } = useContext(Context);
+  const { cartItems, cartSubtotal, scroller, setScroller } =
+    useContext(Context);
   const navigate = useNavigate();
 
   const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUB_KEY);
@@ -29,13 +30,23 @@ const Cart = ({ setCart }) => {
     }
   };
 
+  useEffect(() => {
+    setScroller(false);
+  }, []);
+
   return (
     <div className="cart__panel">
       <div className="cart__opac__layer"></div>
       <div className="cart__content">
         <div className="cart__header">
           <span className="cart__heading">Shopping Cart</span>
-          <span className="close__btn" onClick={() => setCart(false)}>
+          <span
+            className="close__btn"
+            onClick={() => {
+              setCart(false);
+              setScroller(true);
+            }}
+          >
             <MdClose />
             <span className="text">Close</span>
           </span>
