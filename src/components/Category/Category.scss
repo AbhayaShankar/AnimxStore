@@ -38,12 +38,12 @@
             font-size: 20px;
             font-weight: 600;
             letter-spacing: 0.8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
 
             @include md{
                 font-size: 24px;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
             }
 
             .backToHome{
@@ -53,7 +53,10 @@
                 background-color: #9401ca;
                 cursor: pointer;
                 border-radius: 8px;
-                margin-right: 30px;
+
+                @include md{
+                    margin-right: 30px;
+                }
             }
         }
 
