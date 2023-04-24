@@ -4,7 +4,7 @@
 
 #### Update: Everything is done except deploying and site logo design...
 
-Site Logo - Rahul ko diya hai... ✅
+<!-- Site Logo - Rahul ko diya hai... ✅ -->
 
 ---
 

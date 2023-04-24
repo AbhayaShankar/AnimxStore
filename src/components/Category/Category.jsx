@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./Category.scss";
 import Products from "../Products/Products";
 import useFetch from "../../hooks/useFetch";
@@ -11,6 +12,8 @@ const Category = () => {
   const { data } = useFetch(
     `/api/products?populate=*&[filters][categories][id]=${id}`
   );
+
+  const navigate = useNavigate();
 
   // Reason why Loading state is not coming is because of {data} which we are fetching is after resolving the api call.
 
@@ -45,10 +48,15 @@ const Category = () => {
       ) : (
         <div className="layout">
           <div className="category__title">
-            {
-              data?.data?.[0]?.attributes?.categories?.data[0]?.attributes
-                ?.title
-            }
+            <>
+              {
+                data?.data?.[0]?.attributes?.categories?.data[0]?.attributes
+                  ?.title
+              }
+              <button className="backToHome" onClick={() => navigate("/")}>
+                Back to Home
+              </button>
+            </>
           </div>
           <Products innerProp={true} products={data} />
         </div>
