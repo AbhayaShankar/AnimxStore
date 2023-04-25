@@ -11,10 +11,6 @@ const Banner = () => {
           <img src="./icon.png" alt="" />
           <h1>{"  "} Store</h1>
         </div>
-        {/* <p>
-          Unleash the experience you have never experienced before!
-          Welcome to AnimxStore, the ultimate destination for anime fans and collectors! 
-        </p> */}
         <p>
           Welcome to Anim-x-Store, the ultimate destination for anime fans and
           collectors! Our online e-commerce store offers a wide range of

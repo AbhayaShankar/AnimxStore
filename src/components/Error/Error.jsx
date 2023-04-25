@@ -33,11 +33,6 @@ const Error = () => {
         </p>
         <button onClick={handleButtonClick}>Show error</button>
         {swalResult && swalResult.value}
-        {/* <Link to="/">
-          <button onClick={handleError} className="backHome">
-            Back to Home
-          </button>
-        </Link> */}
       </div>
     </div>
   );

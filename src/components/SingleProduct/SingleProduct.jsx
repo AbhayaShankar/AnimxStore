@@ -22,7 +22,6 @@ const SingleProduct = () => {
 
   const { data } = useFetch(`/api/products?populate=*&[filters][id]=${id}`);
   console.log("single product data", data);
-  // console.log(data?.data?.[0].attributes?.img?.data?.[0]?.attributes?.url);
 
   const { handleAddToCart } = useContext(Context);
 
@@ -37,11 +36,6 @@ const SingleProduct = () => {
         return prev - 1;
       }
     });
-    // if (counter === 0) {
-    //   setCounter(0);
-    // } else {
-    //   setCounter((prev) => prev - 1);
-    // }
   };
 
   useEffect(() => {

@@ -27,16 +27,9 @@ const Products = ({
         </span>
       ) : (
         <div className="products">
-          {/* {products?.data?.length === 0 && <h1>Loading</h1>} */}
           {console.log("products length", products)}
           {products?.data?.map((prod) => (
-            <Product
-              key={prod.id}
-              id={prod.id}
-              data={prod.attributes}
-
-              //
-            />
+            <Product key={prod.id} id={prod.id} data={prod.attributes} />
           ))}
         </div>
       )}

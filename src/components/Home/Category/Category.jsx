@@ -7,7 +7,6 @@ import "swiper/css/free-mode";
 import BeatLoader from "react-spinners/BeatLoader";
 
 import "./Category.scss";
-// import cat1 from "../../../assets/category/cat-1.jpg";
 
 const Category = ({ categories }) => {
   const navigate = useNavigate();

@@ -76,7 +76,6 @@ const Header = () => {
             >
               Categories
             </li>
-            {/* data?.data?.[0]?.attributes?.title */}
           </ul>
           <div className={showDropdown ? "dropdown show" : "dropdown"}>
             <ul>

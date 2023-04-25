@@ -3,7 +3,6 @@
 .privacy__main{
     padding: 20px 25px ;
     min-height: 90vh;
-    // background: url(../../assets/privacy.jpg);
     background: rgba(0,0,0,0.1);
     
     
@@ -22,10 +21,6 @@
             object-fit: cover;
             opacity: 0.3;
             position: absolute;
-            // ::before{
-                //     content: "";
-                //     background-color: rgba(0,0,0,0.2);
-                // }
                 
                 @include md{
                     margin-top: 0px;

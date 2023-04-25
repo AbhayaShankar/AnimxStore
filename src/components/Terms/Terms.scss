@@ -21,10 +21,6 @@
             object-fit: cover;
             opacity: 0.3;
             position: absolute;
-            // ::before{
-                //     content: "";
-                //     background-color: rgba(0,0,0,0.2);
-                // }
                 
                 @include md{
                     margin-top: 0px;

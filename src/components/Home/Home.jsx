@@ -2,7 +2,6 @@ import { useEffect, useState, useContext } from "react";
 
 import "./Home.scss";
 import Banner from "./Banner/Banner";
-// import Category from "./Category/Category";
 import Products from "../Products/Products";
 import { fetchDataFromApi } from "../../utils/api";
 import { Context } from "../../utils/context";
@@ -48,15 +47,8 @@ const Home = () => {
             products={products}
             text={"popular products"}
           />
-          {/* {products.length === 0 ? (
-            <h1>Loading products...</h1>
-          ) : (
-            <Products products={products} text={"popular products"} />
-          )} */}
         </div>
       </div>
-      {/* <Newsletter />
-      <Footer /> */}
     </div>
   );
 };

@@ -6,12 +6,11 @@ import github from "../../../assets/socials/github.png";
 import { ToastContainer, toast } from "react-toastify";
 import emailjs from "@emailjs/browser";
 import "react-toastify/dist/ReactToastify.css";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 const Newsletter = () => {
   const newsletterRef = useRef();
   const notify = () => toast("Thankyou for Subscribing! 😊");
-  const [input, setInput] = useState("");
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -93,11 +92,6 @@ const Newsletter = () => {
         >
           <img src={github} alt="" />
         </a>
-        {/* 
-          <img src={insta} alt="" />
-          <img src={twitter} alt="" />
-          <img src={github} alt="" /> */}
-        {/* <img src={facebook} alt="" /> */}
       </div>
     </div>
   );

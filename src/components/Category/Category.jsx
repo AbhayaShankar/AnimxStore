@@ -15,10 +15,6 @@ const Category = () => {
 
   const navigate = useNavigate();
 
-  // Reason why Loading state is not coming is because of {data} which we are fetching is after resolving the api call.
-
-  // What I think we can do is setTimeout Function for 2-3 sec and display the message over there.
-
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
