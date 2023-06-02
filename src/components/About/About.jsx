@@ -37,16 +37,6 @@ const About = () => {
               favorite character or series.
             </p>
           </div>
-          <div className="text__lower">
-//             <p>
-//               Anim-x-store is an full E-commerce website has been created by{" "}
-//               <a href="https://github.com/ShariqAnsari88" target="blank">
-//                 <span> Shariq, </span>
-//               </a>{" "}
-//               and has been skillfully designed, modified, and revamped by me to
-//               enhance its functionality and aesthetics.
-//             </p>
-          </div>
         </div>
       </div>
     </div>
