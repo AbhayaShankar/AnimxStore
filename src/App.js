@@ -6,7 +6,7 @@ import About from "./components/About/About";
 import Error from "./components/Error/Error";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
-// import Cart from "./components/Cart/Cart"
+// import Cart from "./components/Cart/Cart";
 import Terms from "./components/Terms/Terms";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy";
 import Category from "./components/Category/Category";
